@@ -1,5 +1,5 @@
-## Welcome !!,
-2nd Hack The Podsへようこそ！
+id,name,description,max_attempts,value,category,type,state,requirements
+1,Welcome !!,"2nd Hack The Podsへようこそ！
 
 全ての問題で，
 
@@ -12,11 +12,8 @@
 
 まずは手始めに下のFormへFlagを入れてみましょう！
 
-この問題のFlagは `htp-ctf{Welcome_hack_the_pods}` です！
-
-0,10,Welcome,standard,visible,
-
-## SSH CONNECTION,"与えられたSSHアカウントで、problem-serverにSSH接続してみよう
+この問題のFlagは `htp-ctf{Welcome_hack_the_pods}` です！",0,10,Welcome,standard,visible,
+2,SSH CONNECTION,"与えられたSSHアカウントで、problem-serverにSSH接続してみよう
 
 problem-serverのIPアドレス: `192.168.1.2`
 
