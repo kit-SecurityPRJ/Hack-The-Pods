@@ -1,0 +1,133 @@
+## Welcome !!,
+2nd Hack The Podsへようこそ！
+
+全ての問題で，
+
+1. `htp-ctf{xxx}` のという形式のFlagを探す
+2. それぞれの問題の解答Formに入力
+3. Submit
+4. 合っていれば得点！
+
+のような形で進めていきます
+
+まずは手始めに下のFormへFlagを入れてみましょう！
+
+この問題のFlagは `htp-ctf{Welcome_hack_the_pods}` です！
+
+0,10,Welcome,standard,visible,
+
+## SSH CONNECTION,"与えられたSSHアカウントで、problem-serverにSSH接続してみよう
+
+problem-serverのIPアドレス: `192.168.1.2`
+
+方法はReferenceSheet参照、SSHユーザとパスワードは配布のものを使用してください
+
+この問題を解くと新たに２つの問題が開放されます",0,50,Shell,standard,visible,{'prerequisites': [1]}
+3,UNZIP,圧縮ファイルにFLAGが含まれているので，解凍してください,0,50,Shell,standard,visible,{'prerequisites': [1]}
+5,Exit less command,"lessコマンドが実行されている状態になるので，正常終了してください．
+この問題を解くにはproblem-serverの `$HOME/exit-less-command/run` を実行します．
+
+※ $HOME はログインユーザのホームディレクトリという意味の環境変数です
+
+Flagが`flag{xxx}`と表示されますが、`htp-ctf{xxx}` に修正して提出してください",0,50,Shell,standard,visible,"{'prerequisites': [1, 2]}"
+6,File Not Found,"Flagがあるのは `$HOME/file-not-found/` の中のどこからしいんだ
+でも全然わからないから僕の代わりに探してみて欲しい！
+
+※ `$HOME` はログインユーザのホームディレクトリという意味の環境変数です",0,50,Shell,standard,visible,"{'prerequisites': [1, 2]}"
+7,Pick up flag,"あ゛あ゛あ゛あ゛ぁあ、、、、やっちまったああああ゛あ゛あ゛ぁ゛
+
+フラグを記述したファイルの編集中にキーボードが押されぱなしになってて、フラグの前後に余計な文字を入力してしまった
+
+どうかフラグの文字列を探してはもらえないだろうか",0,50,Shell,standard,visible,{'prerequisites': [1]}
+8,M0J1 84KE,Flagが隠れていそうなファイルを発見！あれ？文字化け？！この感じ， `LATIN-GREEK` って文字コードが使われていそうだ！,0,100,Shell,standard,visible,{'prerequisites': [1]}
+9,How to execute ?,同級生がファイルを実行できないと相談してきた。実行できるようにしてあげて、確認してみよう。,0,50,Shell,standard,visible,{'prerequisites': [1]}
+10,Welcome to Network !,"Network分野へようこそ
+
+Network分野では，コンピュータ同士の通信を記録したパケットファイルを解析し，それらを元に様々な情報を見つけたり応用したりしていくことで問題を解いていきます
+
+↓↓問題文↓↓
+
+このファイルは，あるWebサイトへのアクセスログである
+この中でやりとりされているメッセージを探し当ててくれ",0,50,Network,standard,visible,{'prerequisites': [1]}
+11,Welcome to PWN !,"PWNへようこそ！
+
+このジャンルでは、実行ファイルを解析して脆弱性を見つけ出し、その脆弱性を使って実際に攻撃を行うよ！
+
+このジャンルを学ぶことで、自分が書いているプログラムでどのへんが脆弱性になりやすいかが分かるのでセキュアコーディングの癖がついたり、他人のコードの脆弱性な部分を発見できるようになるのでオープンソースソフトウェア（OSS）の脆弱性を見つけたりすることができるよ！
+
+興味がある方はぜひこのジャンルを極めていこう！
+
+PWNの導入は、実行ファイルを実行し動作を確認してから、ソースコードを読んでバグを見つけるんだ。その後は、見つけたバグを使って手元の環境で攻撃を再現できたら、実際に問題サーバーへ攻撃を行ってみよう！
+
+※実行できない場合は再コンパイルする必要がある場合があるので，ヘルプを呼ぶか，再コンパイルしてみてください．
+
+問題サーバーへのアクセス方法：
+以下のコマンドをshellに入力してください
+`nc 192.168.1.3 60000`",0,100,Pwn,standard,visible,{'prerequisites': [1]}
+12,Welcome to REV !,"Reversingへようこそ！
+
+このジャンルでは、実行形式のファイルを解析してパスワードやプロダクトコードを推定したりするよ！
+
+このジャンルを学ぶことで、アセンブリ言語を読めるようになったり、実行ファイルの形式に詳しくなったりして、最終的にはゲームの解析や仕様書が公開されていないソフトの改造、マルウェアの解析なんかもできたりするよ！
+
+興味がある方はぜひこのジャンルを極めていこう！
+
+Reversingの基本は、とにかく実行すること！
+
+どのような出力がされるか、まずは見てみよう！",0,50,Reversing,standard,visible,{'prerequisites': [1]}
+13,wild cat,"echoコマンドでファイル名を確認する方法があるらしい。その時、echo hogeのhogeの部分には何をわたせばいい？
+
+`htp-ctf{...}` の `...` の部分がその文字列になります",0,50,Shell,standard,visible,{'prerequisites': [1]}
+14,Welcome to Web !,"Web分野へようこそ！
+
+この分野では，Webサーバや，ページを構成する要素の脆弱性を突いて問題を解いていきます．いろんなツールやコマンドを駆使してFlagを取ろう！
+
+この問題ではどこかにFlagが隠されているらしい...
+
+Access to http://192.168.1.2 ！",0,50,Web,standard,visible,{'prerequisites': [1]}
+15,Million Click,"Let's training your finger !
+
+http://192.168.1.3:8002",0,100,Web,standard,visible,{'prerequisites': [1]}
+16,INJECTION,"ユーザ検索サービスの中に通常では検索できないユーザがいるらしい．
+その人の性別を特定してくれ！
+
+ユーザ検索サービス：http://192.168.1.3:8003
+
+※ユーザ管理や検索にはSQLを使用しています",0,100,Web,standard,visible,{'prerequisites': [1]}
+17,Another Hidden Page ?! ,"どうやらラズパイではWebサーバが起動しているらしい．ただ，httpのWellknownポート(80)にアクセスしても・・・
+
+http://192.168.1.2",0,100,Network,standard,visible,{'prerequisites': [1]}
+18,What is HTTP method ?,"FLAG = POST + DELETE + PUT + PATCH → http://192.168.1.3:8001
+",0,100,Web,standard,visible,{'prerequisites': [1]}
+19,Who is sending MESSAGE,"うわぁ！誰かがブロードキャストで呼びかけている！？
+
+むむ...何だこのメッセージは...？",0,150,Network,standard,visible,{'prerequisites': [1]}
+20,Input correct password !!,上司がパスワードを忘れたらしい...。正しいパスワードをファイルから見つけ確認しよう!!!,0,100,Reversing,standard,visible,{'prerequisites': [1]}
+21,Welcome to Forensics !,"Forensicsへようこそ！
+
+Forensics分野では，与えられたファイルなどを解析して情報を集めて解いていきます．
+
+
+
+この画像ファイルがもつ情報のどこかにFlagがあるらしいんだけど...なんか君いつもと違わない？",0,50,Forensics,standard,visible,{'prerequisites': [1]}
+22,What File Type,ファイルが開けないよ！うえーん！,0,100,Forensics,standard,visible,{'prerequisites': [1]}
+23,What is File Hash Value,"最近のアニメのタイトルを集めたフォルダを作ったぜ！
+flagはわかりやすく、最も面白いアニメだ！
+正解した諸君はぜひ見てくれよな！
+
+FLAG's hash ( MD5 ) = `3be411253acc83115f8f5397c445947f`
+
+FLAG's hash ( SHA1 ) = `fad15df0dac516d888652cd494926a82be0a582d`",0,100,Misc,standard,visible,{'prerequisites': [1]}
+24,IS THIS ASCII ?,"FLAGを転送してもらったが通信線が破損していてデータがおかしくなってしまったんだ。
+
+頼む、どうか正しいデータを取り出してくれないか！
+
+P.S.  適当なデータをこの回線を使って受信してみた、解析の参考にしてくれ。
+（`test.dat`と`test.row`がこのデータです）",0,150,Crypto,standard,visible,{'prerequisites': [1]}
+25,Symbol ?,友人がコンパイルできないとオブジェクトファイルを渡してきた。コンパイルできるようにしてあげよう。,0,150,Reversing,standard,visible,{'prerequisites': [1]}
+26,Not executed branch!?,タチコマからデータが送られてきた。何やらデータは中にあるようだが、暗号化されている上に分岐に関するバグがありうまく出力できないらしい。解析開始だイシカワ!!!,0,150,Reversing,standard,visible,{'prerequisites': [1]}
+27,What File Type 2,"ファイルが開けないし、なんかファイルサイズが大きいよ〜！うえ〜ん！
+
+※ What File Type と同じように見えて異なるファイルです
+
+※ 序盤は上のHintの方が役に立つと思います",0,200,Forensics,standard,visible,{'prerequisites': [1]}
