@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+    mysql:
+        image: mysql:5.7
+        container_name: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: injection
+            MYSQL_USER: inject
+            MYSQL_PASSWORD: inject
+            TZ: 'Asia/Tokyo'
+        volumes:
+            - ./sql:/docker-entrypoint-initdb.d
+        ports:
+            - 3306:3306
+
+    web:
+        depends_on:
+            - mysql
+        container_name: web
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        environment:
+            MYSQL_HOST: mysql
+        ports:
+            - 80:80
