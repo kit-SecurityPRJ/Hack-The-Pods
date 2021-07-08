@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if users is iterable %}
+<table class="uk-table uk-table-divider uk-width-1-2 uk-margin-left">
+	<thead>
+		<tr>
+			<th>user</th>
+			<th>gender</th>
+		</tr>
+	</thead>
+	{% for user in users %}
+	<tr>
+		<td>{{ user["name"] }}</td>
+		<td>{{ user["gender"] }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% else %}
+{{ users }}
+{% endif %}
+
+{% endblock %}

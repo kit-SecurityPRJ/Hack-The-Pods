@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>INJECTION</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+	</head>
+	<body class="uk-margin-left">
+		<h1 class="uk-text-left uk-margin-top">INJECTION</h1>
+		<div class="uk-margin-left">
+			<form action="/" method="get">
+				<input class="uk-input uk-form-width-medium" type="text" name="name" placeholder="Search User ...">
+				<button class="uk-button uk-button-primary" type="submit">Submit</button>
+			</form>
+		</div>
+		{% block content %}{% endblock %}
+	</body>
+</html>
